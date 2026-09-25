@@ -23,11 +23,15 @@ const App = () => {
 
 
     return (
-        <>
-            <h2>Queue Management System</h2>
-            <AddQueueForm onAdd={addQueue}/>
-            <DisplayQueue queueList={queue} updateStatus={updateStatus} removeFromQueue={removeFromQueue}/>
-        </>
+        <div className="min-h-screen flex flex-col bg-black">
+            <div>
+                <h2 className="text-3xl text-amber-500 pt-2 px-4">Queue Management System</h2>
+            </div>
+            <div className="flex justify-between gap-4">
+                <AddQueueForm onAdd={addQueue}/>
+                <DisplayQueue queueList={queue} updateStatus={updateStatus} removeFromQueue={removeFromQueue}/>
+            </div>
+        </div>
     )   
 
 }
